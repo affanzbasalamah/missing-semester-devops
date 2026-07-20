@@ -51,7 +51,17 @@ export default defineConfig({
 							{ label: 'Labs', slug: 'modules/01-fundamentals/labs' },
 						],
 					},
-						{ label: '2 · Build the Server', slug: 'modules/02-server' },
+						{
+						label: '2 · Build the Server',
+						items: [
+							{ label: 'Overview', slug: 'modules/02-server' },
+							{ label: '2.1 · Bare Metal', slug: 'modules/02-server/bare-metal' },
+							{ label: '2.2 · Anatomy', slug: 'modules/02-server/anatomy' },
+							{ label: '2.3 · Hardening', slug: 'modules/02-server/hardening' },
+							{ label: '2.4 · Operating', slug: 'modules/02-server/operating' },
+							{ label: 'Labs', slug: 'modules/02-server/labs' },
+						],
+					},
 						{ label: '3 · Build the Network', slug: 'modules/03-network' },
 						{ label: '4 · Storage & Virtualization', slug: 'modules/04-storage' },
 						{ label: '5 · Overlay Networks', slug: 'modules/05-overlay' },
