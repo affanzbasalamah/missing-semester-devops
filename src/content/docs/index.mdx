@@ -1,0 +1,87 @@
+---
+title: The Missing Semester of DevOps & Security
+description: The hands-on infrastructure foundation CS school never taught you — build real servers, real networks, and prove it publicly.
+template: splash
+hero:
+  tagline: Build a real server. Build a real network. Secure it, automate it, and host the proof yourself. The hands-on foundation for a career in DevOps and cybersecurity.
+  actions:
+    - text: Start with Module 0
+      link: /modules/00-toolkit/
+      icon: right-arrow
+    - text: Hardware shopping guide
+      link: /guides/hardware/
+      icon: seti:config
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Why this exists
+
+Universities teach algorithms and theory. Jobs demand people who can stand up a server,
+debug a network, harden a system, and automate all of it. Almost nobody teaches the gap
+in between — how computers, networks, and production systems *actually* work.
+
+Inspired by [MIT's Missing Semester](https://missing.csail.mit.edu/), this curriculum
+closes that gap for DevOps and cybersecurity — but with a twist: **everything is built on
+real, cheap hardware you own**. A used micro PC becomes your server. An OpenWrt router
+becomes your network. Your own homelab hosts your portfolio.
+
+## The closed loop
+
+This curriculum has a signature: **your documentation site is both the deliverable and the proof.**
+You self-host your own blog and git repositories on infrastructure you built, reachable through
+an overlay network you configured, secured by hardening you applied. When an employer visits
+your portfolio, the fact that the page loads at all *is* your résumé.
+
+## The curriculum
+
+<CardGrid stagger>
+	<Card title="0 · The Toolkit" icon="laptop">
+		Terminal fluency, git, and technical writing — the tools you'll use every single day.
+		[Start here →](/modules/00-toolkit/)
+	</Card>
+	<Card title="1 · How It Actually Works" icon="magnifier">
+		CPUs, memory, processes, TCP/IP, DNS, TLS — watched live in your own packet captures.
+		[Module 1 →](/modules/01-fundamentals/)
+	</Card>
+	<Card title="2 · Build the Server" icon="seti:linux">
+		Turn a $50 used micro PC into a hardened Linux server, from BIOS to systemd.
+		[Module 2 →](/modules/02-server/)
+	</Card>
+	<Card title="3 · Build the Network" icon="setting">
+		Flash OpenWrt, carve VLANs, run your own DNS and DHCP. Understand every packet's path.
+		[Module 3 →](/modules/03-network/)
+	</Card>
+	<Card title="4 · Storage & Virtualization" icon="seti:db">
+		Disks, filesystems, RAID, backups you actually test, and your first hypervisor.
+		[Module 4 →](/modules/04-storage/)
+	</Card>
+	<Card title="5 · Overlay Networks" icon="seti:pipeline">
+		WireGuard by hand, then Tailscale, then Cloudflare Tunnel — and when to use each.
+		[Module 5 →](/modules/05-overlay/)
+	</Card>
+	<Card title="6 · Self-Hosting" icon="rocket">
+		Reverse proxy, real TLS certificates, and your own public blog + git server.
+		[Module 6 →](/modules/06-selfhosting/)
+	</Card>
+	<Card title="7 · Automation & CI/CD" icon="seti:github">
+		Ansible, pipelines, and the DevOps mindset: never do it manually twice.
+		[Module 7 →](/modules/07-automation/)
+	</Card>
+	<Card title="8 · Security Operations" icon="warning">
+		Scan, harden, monitor, detect. Attack your own lab and find yourself in the logs.
+		[Module 8 →](/modules/08-security/)
+	</Card>
+	<Card title="9 · The Bridge" icon="star">
+		Map your homelab to cloud equivalents, polish the portfolio, get hired.
+		[Module 9 →](/modules/09-career/)
+	</Card>
+</CardGrid>
+
+## How to use this site
+
+- **Self-paced.** Every module has standalone notes, labs, and a checkpoint checklist. No lectures required.
+- **Hardware-first.** Check the [hardware guide](/guides/hardware/) — the full lab costs less than one certification exam.
+- **Public by default.** From Module 0 onward, everything you do lives in a public git repo. Your progress *is* your portfolio.
+- **Finished?** Submit your self-hosted site to the [showcase](/guides/showcase/).
