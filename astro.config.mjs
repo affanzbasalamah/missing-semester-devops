@@ -115,7 +115,17 @@ export default defineConfig({
 							{ label: 'Labs', slug: 'modules/06-selfhosting/labs' },
 						],
 					},
-						{ label: '7 · Automation & CI/CD', slug: 'modules/07-automation' },
+						{
+						label: '7 · Automation & CI/CD',
+						items: [
+							{ label: 'Overview', slug: 'modules/07-automation' },
+							{ label: '7.1 · Scripting', slug: 'modules/07-automation/scripting' },
+							{ label: '7.2 · Ansible', slug: 'modules/07-automation/ansible' },
+							{ label: '7.3 · GitOps & Secrets', slug: 'modules/07-automation/gitops' },
+							{ label: '7.4 · CI/CD', slug: 'modules/07-automation/cicd' },
+							{ label: 'Labs', slug: 'modules/07-automation/labs' },
+						],
+					},
 						{ label: '8 · Security Operations', slug: 'modules/08-security' },
 						{ label: '9 · The Bridge', slug: 'modules/09-career' },
 					],
