@@ -93,7 +93,17 @@ export default defineConfig({
 							{ label: 'Labs', slug: 'modules/04-storage/labs' },
 						],
 					},
-						{ label: '5 · Overlay Networks', slug: 'modules/05-overlay' },
+						{
+						label: '5 · Overlay Networks',
+						items: [
+							{ label: 'Overview', slug: 'modules/05-overlay' },
+							{ label: '5.1 · WireGuard', slug: 'modules/05-overlay/wireguard' },
+							{ label: '5.2 · Tailscale', slug: 'modules/05-overlay/tailscale' },
+							{ label: '5.3 · Cloudflare Tunnel', slug: 'modules/05-overlay/cloudflare' },
+							{ label: '5.4 · Choosing', slug: 'modules/05-overlay/choosing' },
+							{ label: 'Labs', slug: 'modules/05-overlay/labs' },
+						],
+					},
 						{ label: '6 · Self-Hosting', slug: 'modules/06-selfhosting' },
 						{ label: '7 · Automation & CI/CD', slug: 'modules/07-automation' },
 						{ label: '8 · Security Operations', slug: 'modules/08-security' },
