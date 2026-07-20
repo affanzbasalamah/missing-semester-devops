@@ -13,6 +13,33 @@ packet in your home.
 **Hardware needed:** one OpenWrt-supported router (see [hardware guide](/guides/hardware/) —
 many capable used models cost under $30) and ideally a cheap managed switch for the VLAN labs.
 
+## The network you'll build
+
+Here's the segmented topology this module builds toward — the same diagram you'll produce as
+your [deliverable](#deliverable), drawn here as text with Mermaid:
+
+```mermaid
+graph TD
+    Internet([Internet]) --> Router[OpenWrt Router<br/>NAT + Firewall + DNS/DHCP]
+    Router --> Switch[Managed Switch<br/>802.1Q VLANs]
+
+    Switch --> Trusted[VLAN 10 · Trusted LAN<br/>laptops, phones]
+    Switch --> Servers[VLAN 20 · Servers<br/>homelab, Module 2 server]
+    Switch --> IoT[VLAN 30 · IoT<br/>smart devices]
+    Switch --> Guest[VLAN 40 · Guest<br/>visitors]
+
+    Trusted -.can reach.-> Servers
+    IoT -. internet only .-> Internet
+    Guest -. internet only .-> Internet
+
+    classDef vlan fill:#1f6feb22,stroke:#1f6feb,stroke-width:1px;
+    class Trusted,Servers,IoT,Guest vlan;
+```
+
+That diagram is a plain ` ```mermaid ` code block in this page's Markdown — no image file. See
+[Writing diagrams as text](/guides/diagrams/) for how it works and a syntax reference you can
+copy from.
+
 ## What you'll learn
 
 ### Lesson 3.1 — OpenWrt from scratch

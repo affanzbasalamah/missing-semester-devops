@@ -1,10 +1,18 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import mermaid from 'astro-mermaid';
 
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
+		// Mermaid must come before Starlight so it can transform ```mermaid
+		// code blocks before Expressive Code turns them into styled code blocks.
+		mermaid({
+			// Follow the site's light/dark theme automatically.
+			theme: 'default',
+			autoTheme: true,
+		}),
 		starlight({
 			title: 'Missing Semester: DevOps & Security',
 			description:
@@ -22,6 +30,7 @@ export default defineConfig({
 					items: [
 						{ label: 'How to Use This Site', slug: 'guides/how-to-use' },
 						{ label: 'Hardware Shopping Guide', slug: 'guides/hardware' },
+						{ label: 'Diagrams as Text', slug: 'guides/diagrams' },
 					],
 				},
 				{
