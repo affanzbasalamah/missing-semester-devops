@@ -190,13 +190,14 @@ they hear each other); UDP is a postcard (you send it and hope it arrives).**
 Because TCP is connection-oriented, it *establishes* a connection before any data flows, with a
 famous three-step exchange:
 
-```
-Client                          Server
-  │  ──────── SYN ─────────▶      │   "Let's talk. Here's my starting number."
-  │  ◀────── SYN-ACK ───────      │   "OK. I hear you. Here's mine."
-  │  ──────── ACK ─────────▶      │   "Great, I hear you too. Connection open."
-  │                               │
-  │  ═══════ data flows ══════    │
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+    C->>S: SYN — "Let's talk. Here's my starting number."
+    S->>C: SYN-ACK — "OK, I hear you. Here's mine."
+    C->>S: ACK — "Great, I hear you too. Connection open."
+    Note over C,S: Connection established — data flows
 ```
 
 **SYN → SYN-ACK → ACK.** After this handshake, both sides have agreed to a connection and data

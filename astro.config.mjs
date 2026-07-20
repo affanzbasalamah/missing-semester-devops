@@ -71,7 +71,17 @@ export default defineConfig({
 							{ label: 'Labs', slug: 'modules/02-server/labs' },
 						],
 					},
-						{ label: '3 · Build the Network', slug: 'modules/03-network' },
+						{
+						label: '3 · Build the Network',
+						items: [
+							{ label: 'Overview', slug: 'modules/03-network' },
+							{ label: '3.1 · OpenWrt', slug: 'modules/03-network/openwrt' },
+							{ label: '3.2 · Core Services', slug: 'modules/03-network/services' },
+							{ label: '3.3 · Segmentation', slug: 'modules/03-network/segmentation' },
+							{ label: '3.4 · Watching', slug: 'modules/03-network/watching' },
+							{ label: 'Labs', slug: 'modules/03-network/labs' },
+						],
+					},
 						{ label: '4 · Storage & Virtualization', slug: 'modules/04-storage' },
 						{ label: '5 · Overlay Networks', slug: 'modules/05-overlay' },
 						{ label: '6 · Self-Hosting', slug: 'modules/06-selfhosting' },

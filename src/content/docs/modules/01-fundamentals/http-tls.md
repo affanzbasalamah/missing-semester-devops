@@ -147,19 +147,17 @@ misunderstand most.
 
 Before any encrypted HTTP flows, TLS does a **handshake** to set up the encryption. Simplified:
 
-```
-Client                                    Server
-  │  ── ClientHello ──────────────▶         │  "Hi. Here are the TLS versions and
-  │      (supported ciphers, etc.)          │   ciphers I support."
-  │                                         │
-  │  ◀───────── ServerHello ────────        │  "Let's use this one. And here is my
-  │      + certificate                      │   CERTIFICATE proving who I am."
-  │                                         │
-  │  (client verifies the certificate,      │
-  │   then both sides derive a shared       │
-  │   secret key using public-key crypto)   │
-  │                                         │
-  │  ══════ encrypted HTTP flows ═══════════│
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+    C->>S: ClientHello — "Here are the TLS versions and ciphers I support."
+    S->>C: ServerHello + Certificate — "Let's use this one. Here's my certificate proving who I am."
+    Note over C: Verifies the certificate against a trusted CA
+    Note over C,S: Both derive a shared secret key via public-key crypto
+    C->>S: Finished (encrypted)
+    S->>C: Finished (encrypted)
+    Note over C,S: Encrypted HTTP now flows
 ```
 
 Two phases: first the two sides **agree on how to encrypt** and the server **proves its
