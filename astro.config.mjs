@@ -13,7 +13,7 @@ export default defineConfig({
 				{
 					icon: 'github',
 					label: 'GitHub',
-					href: 'https://github.com/your-username/missing-semester-devops',
+					href: 'https://github.com/affanzbasalamah/missing-semester-devops',
 				},
 			],
 			sidebar: [
