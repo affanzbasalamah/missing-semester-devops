@@ -104,7 +104,17 @@ export default defineConfig({
 							{ label: 'Labs', slug: 'modules/05-overlay/labs' },
 						],
 					},
-						{ label: '6 · Self-Hosting', slug: 'modules/06-selfhosting' },
+						{
+						label: '6 · Self-Hosting',
+						items: [
+							{ label: 'Overview', slug: 'modules/06-selfhosting' },
+							{ label: '6.1 · Docker & Compose', slug: 'modules/06-selfhosting/docker' },
+							{ label: '6.2 · Reverse Proxy', slug: 'modules/06-selfhosting/reverse-proxy' },
+							{ label: '6.3 · TLS Certificates', slug: 'modules/06-selfhosting/tls' },
+							{ label: '6.4 · The Services', slug: 'modules/06-selfhosting/services' },
+							{ label: 'Labs', slug: 'modules/06-selfhosting/labs' },
+						],
+					},
 						{ label: '7 · Automation & CI/CD', slug: 'modules/07-automation' },
 						{ label: '8 · Security Operations', slug: 'modules/08-security' },
 						{ label: '9 · The Bridge', slug: 'modules/09-career' },
