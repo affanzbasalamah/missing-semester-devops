@@ -138,7 +138,17 @@ export default defineConfig({
 							{ label: 'Labs', slug: 'modules/08-security/labs' },
 						],
 					},
-						{ label: '9 · The Bridge', slug: 'modules/09-career' },
+						{
+						label: '9 · The Bridge',
+						items: [
+							{ label: 'Overview', slug: 'modules/09-career' },
+							{ label: '9.1 · Cloud Mapping', slug: 'modules/09-career/cloud-mapping' },
+							{ label: '9.2 · Cloud Deploy', slug: 'modules/09-career/cloud-deploy' },
+							{ label: '9.3 · Threat Modeling', slug: 'modules/09-career/threat-model' },
+							{ label: '9.4 · Portfolio & Job Hunt', slug: 'modules/09-career/portfolio' },
+							{ label: 'Labs', slug: 'modules/09-career/labs' },
+						],
+					},
 					],
 				},
 				{
