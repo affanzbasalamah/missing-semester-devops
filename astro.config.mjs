@@ -82,7 +82,17 @@ export default defineConfig({
 							{ label: 'Labs', slug: 'modules/03-network/labs' },
 						],
 					},
-						{ label: '4 · Storage & Virtualization', slug: 'modules/04-storage' },
+						{
+						label: '4 · Storage & Virtualization',
+						items: [
+							{ label: 'Overview', slug: 'modules/04-storage' },
+							{ label: '4.1 · Disks & Filesystems', slug: 'modules/04-storage/disks' },
+							{ label: '4.2 · Redundancy', slug: 'modules/04-storage/redundancy' },
+							{ label: '4.3 · Backups', slug: 'modules/04-storage/backups' },
+							{ label: '4.4 · Virtualization', slug: 'modules/04-storage/virtualization' },
+							{ label: 'Labs', slug: 'modules/04-storage/labs' },
+						],
+					},
 						{ label: '5 · Overlay Networks', slug: 'modules/05-overlay' },
 						{ label: '6 · Self-Hosting', slug: 'modules/06-selfhosting' },
 						{ label: '7 · Automation & CI/CD', slug: 'modules/07-automation' },
