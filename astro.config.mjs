@@ -5,6 +5,8 @@ import mermaid from 'astro-mermaid';
 
 // https://astro.build/config
 export default defineConfig({
+	// Public URL the site is served from — used for the sitemap and absolute URLs.
+	site: 'https://missing-semester-devops.salamahsystems.com',
 	integrations: [
 		// Mermaid must come before Starlight so it can transform ```mermaid
 		// code blocks before Expressive Code turns them into styled code blocks.
