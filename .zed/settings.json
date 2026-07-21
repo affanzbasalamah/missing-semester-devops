@@ -1,0 +1,54 @@
+// Project-scoped Zed settings for the Missing Semester site.
+// Applies to anyone who opens this folder in Zed. Overrides your user
+// settings only for this project. Docs: https://zed.dev/docs/configuring-zed
+{
+  // Wrap long lines in the editor at the pane width — nicer for prose/Markdown
+  // (does not change the files; it's display-only).
+  "soft_wrap": "editor_width",
+
+  // Show a subtle guide where prose gets long; doesn't enforce anything.
+  "wrap_guides": [100],
+
+  // Don't auto-reformat on save. Markdown/MDX reflowing can fight with
+  // hand-wrapped lines and Starlight syntax, so keep saves non-destructive.
+  "format_on_save": "off",
+
+  // Trim trailing whitespace, but NOT in Markdown — two trailing spaces are a
+  // meaningful hard line break there.
+  "remove_trailing_whitespace_on_save": true,
+  "ensure_final_newline_on_save": true,
+
+  // Open the integrated terminal in the project root (for `npm run dev`, git, etc.).
+  "terminal": {
+    "working_directory": "current_project_directory"
+  },
+
+  // Keep noisy build/output folders out of the file tree and search.
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/node_modules",
+    "**/dist",
+    "**/.astro",
+    "**/.wrangler"
+  ],
+
+  // Per-language tweaks.
+  "languages": {
+    "Markdown": {
+      "soft_wrap": "editor_width",
+      "format_on_save": "off",
+      // Preserve meaningful trailing spaces (hard line breaks) in prose.
+      "remove_trailing_whitespace_on_save": false,
+      "show_edit_predictions": false
+    },
+    "MDX": {
+      "soft_wrap": "editor_width",
+      "format_on_save": "off",
+      "remove_trailing_whitespace_on_save": false
+    },
+    "YAML": {
+      // Frontmatter and configs — keep indentation tidy and explicit.
+      "tab_size": 2
+    }
+  }
+}
