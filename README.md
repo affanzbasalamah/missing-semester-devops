@@ -39,6 +39,33 @@ npm run preview  # preview the production build
 Content lives in `src/content/docs/` (`modules/` and `guides/`). Navigation is configured in
 `astro.config.mjs`.
 
+## Updating the live site
+
+The site is hosted on **Cloudflare Pages** at
+<https://missing-semester-devops.salamahsystems.com>.
+
+**Once the Pages project is connected to this GitHub repo** (Cloudflare dashboard → the project →
+Settings → Builds & deployments → Connect to Git; production branch `main`, build command
+`npm run build`, output directory `dist`), publishing is just:
+
+```sh
+# edit content in src/content/docs/, then:
+git add -A && git commit -m "…" && git push
+```
+
+Every push to `main` triggers a Cloudflare build (`npm run build`, Node pinned via
+`.node-version`) and auto-deploys. Any editor works — including Zed's Git panel or its integrated
+terminal — since the deploy trigger is simply the push to GitHub.
+
+**Manual deploy** (if the project is not Git-connected, i.e. direct-upload mode):
+
+```sh
+npm run build
+npx wrangler pages deploy dist --project-name=missing-semester-devops
+```
+
+Optionally run `npm run dev` first to preview changes locally before pushing.
+
 ## Contributing
 
 Corrections, better explanations, and new resource links are welcome via pull request —
